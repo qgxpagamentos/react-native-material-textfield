@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import { Animated, Text } from 'react-native';
 
 import styles from './styles';
 
@@ -11,7 +11,7 @@ export default class Affix extends PureComponent {
 
   static propTypes = {
     numberOfLines: PropTypes.number,
-    style: Animated.Text.propTypes.style,
+    style: Text.prototype.props.style,
 
     color: PropTypes.string.isRequired,
     fontSize: PropTypes.number.isRequired,
@@ -32,7 +32,7 @@ export default class Affix extends PureComponent {
 
   render() {
     let { labelAnimation, style, children, type, fontSize, color } = this.props;
-
+    
     let containerStyle = {
       height: fontSize * 1.5,
       opacity: labelAnimation,
