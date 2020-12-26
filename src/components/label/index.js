@@ -43,7 +43,7 @@ export default class Label extends PureComponent {
       y1: PropTypes.number,
     }),
 
-    style: Text.prototype.props.style,
+    style: Text.prototype.style,
     label: PropTypes.string,
   };
 
